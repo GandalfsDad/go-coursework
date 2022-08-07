@@ -20,7 +20,6 @@ func main() {
 	//Remove Something
 	delete(colours, "white")
 
-	//fmt.Println(colours)
 	printMap(colours)
 }
 
