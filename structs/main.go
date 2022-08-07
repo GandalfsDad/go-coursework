@@ -23,8 +23,7 @@ func main() {
 		},
 	}
 
-	fredPointer := &fred
-	fredPointer.updateName("Bill")
+	fred.updateName("Bill")
 	fred.print()
 }
 
