@@ -20,5 +20,12 @@ func main() {
 	//Remove Something
 	delete(colours, "white")
 
-	fmt.Println(colours)
+	//fmt.Println(colours)
+	printMap(colours)
+}
+
+func printMap(c map[string]string) {
+	for colour, hex := range c {
+		fmt.Println("Hex code for", colour, "is", hex)
+	}
 }
