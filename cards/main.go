@@ -1,10 +1,7 @@
 package main
 
 func main() {
-	//var card string = newCard()
-	cards := deck{newCard(), newCard()}
-
-	cards = append(cards, "Six of Spades") //creates new slice
+	cards := newDeck()
 
 	cards.print()
 
