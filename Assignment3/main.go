@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"os"
 )
 
@@ -15,5 +16,12 @@ func main() {
 	}
 
 	l := os.Args[1]
-	fmt.Println(l)
+
+	f, err := os.Open(l)
+
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
+
+	io.Copy(os.Stdout, f)
 }
