@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func main() {
 	websites := []string{
@@ -14,4 +17,15 @@ func main() {
 	for _, website := range websites {
 		fmt.Println(website)
 	}
+}
+
+func checkLink(link string) {
+	_, err := http.Get(link)
+
+	if err != nil {
+		fmt.Println(link, "might be down!")
+		return
+	}
+
+	fmt.Println(link, "is up!")
 }
