@@ -20,7 +20,13 @@ func main() {
 		go checkLink(website, c)
 	}
 
-	fmt.Println(<-c)
+	v := []int{1, 2, 3, 4, 5}
+
+	for i := range v {
+		fmt.Println(<-c)
+		fmt.Println(i)
+	}
+
 }
 
 func checkLink(link string, c chan string) {
